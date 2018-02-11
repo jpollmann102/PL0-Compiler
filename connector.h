@@ -2,7 +2,6 @@
 * PM/0
 * COP 3402
 * Joshua Pollmann
-* jo629932
 */
 
 #include <stdlib.h>
