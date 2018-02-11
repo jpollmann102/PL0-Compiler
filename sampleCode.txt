@@ -1,0 +1,59 @@
+var x, y;
+
+procedure add;
+begin
+  x := x + y;
+end;
+
+procedure sub;
+begin
+  x := x - y;
+end;
+
+procedure mult;
+begin
+  x := x * y;
+end;
+
+procedure div;
+begin
+  x := x / y;
+end;
+
+procedure incr;
+begin
+  x := x + 1;
+end;
+
+procedure downToOne;
+begin
+  while x > 1
+  do
+    x := x - 1;
+end;
+
+procedure everything;
+begin
+  call add;
+  write x;
+  x := 10;
+  call sub;
+  write x;
+  x := 10;
+  call mult;
+  write x;
+  x := 10;
+  call div;
+  write x;
+  x := 10;
+  call downToOne;
+  write x;
+  call incr;
+  write x;
+end;
+
+begin
+  x := 10;
+  y := 5;
+  call everything;
+end.

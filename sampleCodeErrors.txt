@@ -1,0 +1,233 @@
+Code:
+const m := 3;
+var x, y;
+begin
+	m := 5;
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 0, Use = instead of :=
+
+Code:
+const m = a;
+var x, y;
+begin
+	m := 5;
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 1, = must be followed by a number
+
+Code:
+const m 3;
+var x, y;
+begin
+	m := 5;
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 2, Identifier must be followed by a number
+
+Code:
+const = 3;
+var x, y;
+begin
+	m := 5;
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 3, const, var, procedure must be followed by identifier
+
+Code:
+var x, y;
+begin
+	y := 3;
+	write y;
+	x := y + 56;
+	write x;
+end
+
+Output:
+*****Error number 8, Period expected
+
+Code:
+const m = 3;
+var x, y;
+begin
+	m := 5;
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 11, Assignment to constant or procedure is not allowed
+
+Code:
+const m = 3;
+var x, y;
+procedure incr;
+begin
+	y := y + 1;
+end;
+begin
+	y := 5;
+	write y;
+	call y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 14, Call of a constant or variable is meaningless
+
+Code:
+const m = 3;
+var x, y;
+procedure incr;
+begin
+	if y < 10
+		y := y + 1;
+end;
+begin
+	y := 5;
+	write y;
+	call y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 15, then expected
+
+Code:
+var x, y;
+begin
+	y := 3
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 16, Semicolon or end expected
+
+Code:
+const m = 3;
+var x, y;
+procedure incr;
+begin
+	while y < 10
+		y := y + 1;
+end;
+begin
+	y := 5;
+	write y;
+	call y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 17, do expected
+
+Code:
+const m = 3;
+var x, y;
+procedure incr;
+begin
+	if y
+	then y := y + 1
+end;
+begin
+	y := 5;
+	write y;
+	call y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 19, Relational operator expected
+
+Code:
+const m = 3;
+var x, y;
+procedure incr;
+begin
+	if (y < 10
+	then y := y + 1
+end;
+begin
+	y := 5;
+	write y;
+	call y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 21, Right parenthesis missing 
+
+Code:
+const m = 3, m = 6;
+var x, y;
+procedure incr;
+begin
+	if y < 10
+	then y := y + 1
+end;
+begin
+	y := 5;
+	write y;
+	call incr;
+	x := y + 56;
+	write x;
+end.
+
+Code:
+const m = 3541564156156456;
+var x, y;
+procedure incr;
+begin
+	if y < 10
+	then y := y + 1
+end;
+begin
+	y := 5;
+	write y;
+	call incr;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 23, This number is too large 
+
+Output:
+*****Error number 25, Var already declared
+
+Code:
+const m 3;
+var x, y;
+begin
+	m := 5;
+	write y;
+	x := y + 56;
+	write x;
+end.
+
+Output:
+*****Error number 29, Expected =
